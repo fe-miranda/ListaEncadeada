@@ -12,7 +12,14 @@ public class Lista {
         return primeiro == null;
     }
 
+    public void listaVazia(){
+        if(vazia() == true){
+            System.out.print("Lista vazia!!!\n\n\n");
+        }
+    }
+
     public void inserePrimeiro(int info) {
+
         No auxiliar = new No();
         auxiliar.setInfo(info);
         auxiliar.setProx(primeiro);
@@ -22,7 +29,7 @@ public class Lista {
 
 
     public void insereDepois(int no1, int info){
-        System.out.print("inserindo depois do no " + no1 + " o elemento " + info + "\n");
+        System.out.print("Inserindo depois do no " + no1 + " o elemento " + info + ".\n");
         No anterior = null;
         No atual = primeiro;
 
@@ -58,6 +65,7 @@ public class Lista {
     }
 
     public void removePrimeiro() {
+        System.out.print("Removendo primeiro elemento da lista: \n");
         primeiro = primeiro.getProx();
         tamanho --;
     }
@@ -80,7 +88,7 @@ public class Lista {
     }
 
     public void removeNo(int info) {
-        System.out.print("removendo o elemento " + info + "\n");
+        System.out.print("Removendo o no " + info + " da lista.\n");
         No anterior = null;
         No atual = primeiro;
         while (atual != null && atual.getProx() != null) {
@@ -99,6 +107,6 @@ public class Lista {
             System.out.print(auxiliar.getInfo() + ",");
             auxiliar = auxiliar.getProx();
         }
-        System.out.print("\ntamanho = "+ tamanho + "\n");
+        System.out.print("\nTamanho em quantidade de elementos na lista = "+ tamanho + " elementos.\n");
     }
 }
