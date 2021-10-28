@@ -30,5 +30,13 @@ public class app {
         l.mostrar();
 
 
+        System.out.print("\nremovendo no determinado\n");
+        l.removeNo( 20);
+        l.mostrar();
+
+        System.out.print("\ninserindo depois de no determinado\n");
+        l.insereDepois(30,90);
+        l.mostrar();
+
     }
 }

@@ -5,6 +5,7 @@ public class No {
     {
         informacao = null;
         proximo = null;
+        int no;
     }
 
     public void setInfo(Integer informacao){
@@ -23,4 +24,8 @@ public class No {
 
         return this.informacao;
     }
-}
+
+
+
+    }
+

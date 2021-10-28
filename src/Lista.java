@@ -20,7 +20,24 @@ public class Lista {
         tamanho ++;
     }
 
-    
+
+    public void insereDepois(int no1, int info){
+        System.out.print("inserindo depois do no " + no1 + " o elemento " + info + "\n");
+        No anterior = null;
+        No atual = primeiro;
+
+        while (atual != null && atual.getProx() != null) {
+            anterior = atual;
+            atual = atual.getProx();
+            if (anterior.getInfo() == no1) {
+                No novo = new No();
+                novo.setInfo(info);
+                anterior.setProx(novo);
+                novo.setProx(atual);
+                tamanho ++;
+            }
+        }
+    }
 
     public void insereUltimo(int info) {
 
@@ -62,8 +79,18 @@ public class Lista {
         }
     }
 
-    public void insereDepois(No no, int info) {
-
+    public void removeNo(int info) {
+        System.out.print("removendo o elemento " + info + "\n");
+        No anterior = null;
+        No atual = primeiro;
+        while (atual != null && atual.getProx() != null) {
+            anterior = atual;
+            atual = atual.getProx();
+            if (atual.getInfo() == info) {
+                anterior.setProx(atual.getProx());
+                tamanho--;
+            }
+        }
     }
 
     public void mostrar(){
